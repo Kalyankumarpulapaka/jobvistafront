@@ -11,20 +11,23 @@ const Login = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate(); // Initialize useNavigate
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+const handleLogin = async (e) => {
+  e.preventDefault();
 
-    try {
-      await axios.post("https://jobvistabackend-1.onrender.com/api/auth/login", {
-        email,
-        password,
-      });
-      setMessage("Login successful!");
-      navigate('/dashboard'); // Redirect to the dashboard
-    } catch (error) {
-      setMessage("An error occurred during login.");
-    }
-  };
+  try {
+    const response = await axios.post("https://jobvistabackend-1.onrender.com/api/auth/login", {
+      email,
+      password,
+    });
+    setMessage("Login successful!");
+    // Save the token or redirect user as needed
+    navigate('/dashboard'); // Redirect to the dashboard
+  } catch (error) {
+    // Handle error response and display message
+    setMessage("An error occurred during login.");
+  }
+};
+
 
   return (
     <MDBContainer fluid className="p-4 background-radial-gradient overflow-hidden">
