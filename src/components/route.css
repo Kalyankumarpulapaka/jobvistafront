@@ -1,0 +1,32 @@
+.jobs-container {
+    background-color: #eef2f7;
+  }
+  
+  .job-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  .messages-container {
+    background-color: #f8f9fa;
+  }
+  
+  .message-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  .profile-container {
+    background-color: #f5f5f5;
+    padding: 40px;
+  }
+  
+  .profile-container h4 {
+    font-weight: bold;
+  }
+  
+  img.rounded-circle {
+    width: 150px;
+    height: 150px;
+  }
+  

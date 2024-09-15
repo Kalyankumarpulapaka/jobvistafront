@@ -1,0 +1,61 @@
+/* Outer Navbar */
+/* Adjusting navbar styles */
+.navbar {
+  height: 100px;
+  background-color: black !important;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 3% !important;
+}
+
+/* Positioning for snowflakes */
+.snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1; /* Behind the navbar */
+}
+
+
+.navbar-brand {
+  font-size: 2rem !important;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+.nav-link {
+  margin: 0 20px;
+  font-size: 1rem;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M5 7h20M5 15h20M5 23h20'/%3E%3C/svg%3E");
+}
+
+/* Inner Navbar */
+.inner-navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  background-color: #333 !important;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.inner-navbar .navbar-brand {
+  font-size: 1.5rem !important;
+  margin-right: 30px;
+}
+
+.inner-navbar .nav-link {
+  margin: 0 10px;
+}
