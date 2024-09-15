@@ -1,4 +1,3 @@
-// src/Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput } from 'mdb-react-ui-kit';
@@ -16,7 +15,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await axios.post("https://jobvistabackend-1.onrender.com/api/auth/login", {
         email,
         password,
       });
@@ -29,7 +28,7 @@ const Login = () => {
 
   return (
     <MDBContainer fluid className="p-4 background-radial-gradient overflow-hidden">
-    <MyNavbar/>
+      <MyNavbar />
       <MDBRow>
         <MDBCol md="6" className="text-center text-md-start d-flex flex-column justify-content-center">
           <h1 className="my-5 display-3 fw-bold ls-tight px-3 text-light">
