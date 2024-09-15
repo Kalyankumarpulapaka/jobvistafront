@@ -58,10 +58,6 @@ function Signup() {
     setResume(e.target.files[0]);
   };
 
-  const handleSocialLogin = (provider) => {
-    window.location.href = `https://jobvistabackend-1.onrender.com/api/auth/${provider}`;
-  };
-
   return (
     <MDBContainer fluid className="p-4 background-radial-gradient overflow-hidden">
       <Navbar />
@@ -152,20 +148,6 @@ function Signup() {
                   <Link to="/login">
                     <MDBBtn color="primary">Login</MDBBtn>
                   </Link>
-                </div>
-                <div className="text-center mt-4">
-                  <p>Or sign up with</p>
-                  <div className="d-flex justify-content-center">
-                    <MDBBtn className="social-btn google mx-3" onClick={() => handleSocialLogin("google")}>
-                      <MDBIcon fab icon="google" />
-                    </MDBBtn>
-                    <MDBBtn className="social-btn linkedin mx-3" onClick={() => handleSocialLogin("linkedin")}>
-                      <MDBIcon fab icon="linkedin" />
-                    </MDBBtn>
-                    <MDBBtn className="social-btn github mx-3" onClick={() => handleSocialLogin("github")}>
-                      <MDBIcon fab icon="github" />
-                    </MDBBtn>
-                  </div>
                 </div>
                 {message && <div className="alert alert-info mt-4">{message}</div>}
               </form>
