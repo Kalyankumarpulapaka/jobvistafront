@@ -58,11 +58,12 @@ function Signup() {
     setResume(e.target.files[0]);
   };
 
+  const handleSocialLogin = (provider) => {
+    window.location.href = `https://jobvistabackend-1.onrender.com/api/auth/${provider}`;
+  };
+
   return (
-    <MDBContainer
-      fluid
-      className="p-4 background-radial-gradient overflow-hidden"
-    >
+    <MDBContainer fluid className="p-4 background-radial-gradient overflow-hidden">
       <Navbar />
       <MDBRow>
         <MDBCol
@@ -71,27 +72,17 @@ function Signup() {
         >
           <h1 className="my-5 display-3 fw-bold ls-tight px-3 text-light">
             Find Your Dream Job <br />
-            <span
-              className="text-light"
-              style={{ color: "hsl(218, 81%, 75%)" }}
-            >
+            <span className="text-light" style={{ color: "hsl(218, 81%, 75%)" }}>
               with us :)
             </span>
           </h1>
           <p className="px-3 text-light">
-            Discover the perfect job that aligns with your skills and career
-            goals.
+            Discover the perfect job that aligns with your skills and career goals.
           </p>
         </MDBCol>
         <MDBCol md="6" className="position-relative">
-          <div
-            id="radius-shape-1"
-            className="position-absolute rounded-circle shadow-5-strong"
-          ></div>
-          <div
-            id="radius-shape-2"
-            className="position-absolute shadow-5-strong"
-          ></div>
+          <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
           <MDBCard className="my-5 bg-glass">
             <MDBCardBody className="p-5">
               <form onSubmit={handleSubmit}>
@@ -134,10 +125,7 @@ function Signup() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <div className="custom-file-input-container mb-4">
-                  <label
-                    className="custom-file-input-label"
-                    htmlFor="resumeUpload"
-                  >
+                  <label className="custom-file-input-label" htmlFor="resumeUpload">
                     <MDBIcon icon="file-upload" className="file-icon" />
                     <span className="file-text">Upload Resume</span>
                     <input
@@ -168,20 +156,18 @@ function Signup() {
                 <div className="text-center mt-4">
                   <p>Or sign up with</p>
                   <div className="d-flex justify-content-center">
-                    <MDBBtn className="social-btn google mx-3">
+                    <MDBBtn className="social-btn google mx-3" onClick={() => handleSocialLogin("google")}>
                       <MDBIcon fab icon="google" />
                     </MDBBtn>
-                    <MDBBtn className="social-btn linkedin mx-3">
+                    <MDBBtn className="social-btn linkedin mx-3" onClick={() => handleSocialLogin("linkedin")}>
                       <MDBIcon fab icon="linkedin" />
                     </MDBBtn>
-                    <MDBBtn className="social-btn github mx-3">
+                    <MDBBtn className="social-btn github mx-3" onClick={() => handleSocialLogin("github")}>
                       <MDBIcon fab icon="github" />
                     </MDBBtn>
                   </div>
                 </div>
-                {message && (
-                  <div className="alert alert-info mt-4">{message}</div>
-                )}
+                {message && <div className="alert alert-info mt-4">{message}</div>}
               </form>
             </MDBCardBody>
           </MDBCard>
