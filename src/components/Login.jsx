@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://jobvistabackend-1.onrender.com/api/auth/login", {
+      await axios.post("https://jobvistabackend-1.onrender.com/api/auth/login", {
         email,
         password,
       });

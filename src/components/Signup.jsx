@@ -34,7 +34,7 @@ function Signup() {
     formData.append("resume", resume);
 
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://jobvistabackend-1.onrender.com/api/auth/register",
         formData,
         {
